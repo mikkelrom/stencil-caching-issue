@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gethash": "node hashname-test.js",
+    "install-and-build": "npm i && cd stencil-test && npm i && npm run build",
+    "build": "cd stencil-test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/mikkelrom/stencil-caching-issue/issues"
   },
-  "homepage": "https://github.com/mikkelrom/stencil-caching-issue#readme"
+  "homepage": "https://github.com/mikkelrom/stencil-caching-issue#readme",
+  "devDependencies": {
+    "hasha": "^5.2.0"
+  }
 }
