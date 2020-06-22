@@ -8,7 +8,7 @@ to this: `return <div>Hello, World 2! I'm {this.getText()}</div>;`
 1. Run `npm run build` to generate new files with the recent change
 1. Run `npm run gethash` again, and observe that the hash-value logged in the terminal has change - but the filename has not. It's still `p-8874d9b8.system.js`.
 
-#Conclusion
+# Conclusion
 The contents of `p-8874d9b8.system.js` changes without the file itself is renamed, which means that the `p-*`-files isn't immutable even though:
  1. The `stencil-test/www/host.config.json` suggests that this HTTP response header should be added to files that matches `/build/p-*`: `cache-control: max-age=31556952, s-maxage=31556952, immutable`
  1. The docs says that the files can be "forever-cached" and "If the content isn't updated between builds, then it receives the same filename. When the content is updated, then the filename is different" - this is currently not true unfortunately 😢
