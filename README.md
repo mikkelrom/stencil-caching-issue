@@ -2,11 +2,11 @@
 
 1. Clone repo to a local folder
 1. Run `npm run install-and-build`
-1. Run `npm run gethash` and observe the hash-value logged in the terminal - should be `18064c297d1974966e6d9b7758be17dd`
+1. Run `npm run gethash` and observe the hash-value logged in the terminal - should be `3ed71af4e2f9a3347a4371fd04ce7abf`
 1. Open `stencil-test/src/components/my-component/my-component.tsx` and change this: `return <div>Hello, World! I'm {this.getText()}</div>;`
 to this: `return <div>Hello, World 2! I'm {this.getText()}</div>;`
 1. Run `npm run build` to generate new files with the recent change
-1. Run `npm run gethash` again, and observe that the hash-value logged in the terminal has changed to `8b03a950fcd16b6c9f39f400c4df4822` - but the filename has not. It's still `p-8874d9b8.system.js`.
+1. Run `npm run gethash` again, and observe that the hash-value logged in the terminal has changed to ` ` - but the filename has not. It's still `p-8874d9b8.system.js`.
 
 # Conclusion
 The contents of `p-8874d9b8.system.js` changes without the file itself is renamed, which means that the `p-*`-files isn't immutable even though:
